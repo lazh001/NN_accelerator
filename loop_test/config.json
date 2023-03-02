@@ -1,0 +1,14 @@
+{
+    "op": {
+        "compute" : "00",
+        "store" : "01",
+        "load_input"  : "10",
+        "load_weight" : "11"
+    },
+    "register_size" : "4",
+    "address_range" : "1000",
+    "ip_base_address" : "40000000",
+    "register_base_address" : "00000000",
+    "memory_offset" : "32",
+    "length" : "2"
+}
