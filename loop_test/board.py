@@ -14,10 +14,10 @@ config.json and overlay which is stored in module_name.bit.
 class board:
     def __init__(self) -> None:
         logging.info("Trying to load overlay...")
-        self.ol = Overlay("module_name.bit")
+        self.ol = Overlay("dot.bit")
         self.ol.download()
         logging.info(self.ol.ip_dict)
-        self.module = self.ol.module_name
+        self.module = self.ol.shellSimple_0.io_host
         logging.info("Loading overlay ok.")
 
         logging.info("Loading configs...")

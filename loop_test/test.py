@@ -3,9 +3,9 @@ import logging
 from board import board
 
 class Mytest(unittest.TestCase):
-    def __init__(self) -> None:
-        super().__init__()
-        self.board = board()
+    #def __init__(self) -> None:
+        #super().__init__()
+        #self.board = board()
     
     # def setUp(self) -> None:
     #     logging.info("===== setUp =====")
