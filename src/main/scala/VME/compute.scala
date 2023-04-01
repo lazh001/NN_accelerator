@@ -6,6 +6,7 @@ import chisel3.util._
 import mynnacc.interface.axi._
 import mynnacc.dma._
 import vta.core._
+import core.Dot
 
 class ComputSimple(coreP : CoreParams) extends Module {
     val io = IO(new Bundle {
@@ -13,7 +14,8 @@ class ComputSimple(coreP : CoreParams) extends Module {
         val interrupt = Output(Bool())
     })
 
-    val dot = Module(new DotProduct())
+    // val dot = Module(new DotProduct())
+    val dot = Module(new Dot)
 
     val coreIdle :: coreCompute :: Nil = Enum(2)
     val corestate = RegInit(coreIdle)
