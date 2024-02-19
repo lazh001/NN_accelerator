@@ -1,4 +1,4 @@
-package mynnacc.interface.axi
+package interface.axi
 
 import chisel3._
 import chisel3.util._

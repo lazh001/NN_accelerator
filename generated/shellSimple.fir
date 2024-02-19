@@ -1,4 +1,4 @@
-circuit shellSimple :
+circuit ShellSimple :
   module DMASimpleXil :
     input clock : Clock
     input reset : Reset
@@ -294,16 +294,16 @@ circuit shellSimple :
   module MAC :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>, flip b : UInt<8>, flip c : UInt<1>, y : UInt<17>}
+    output io : { flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<1>, y : SInt<17>}
 
-    wire mult : UInt<16> @[vtaGEMM.scala 17:18]
-    reg rA : UInt, clock with :
+    wire mult : SInt<16> @[vtaGEMM.scala 17:18]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 18:31]
     rA <= io.a @[vtaGEMM.scala 18:31]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 19:31]
     rB <= io.b @[vtaGEMM.scala 19:31]
-    reg rC : UInt, clock with :
+    reg rC : SInt, clock with :
       reset => (UInt<1>("h0"), rC) @[vtaGEMM.scala 20:31]
     rC <= io.c @[vtaGEMM.scala 20:31]
     node _mult_T = mul(rA, rB) @[vtaGEMM.scala 22:14]
@@ -314,16 +314,16 @@ circuit shellSimple :
   module MAC_1 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>, flip b : UInt<8>, flip c : UInt<1>, y : UInt<17>}
+    output io : { flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<1>, y : SInt<17>}
 
-    wire mult : UInt<16> @[vtaGEMM.scala 17:18]
-    reg rA : UInt, clock with :
+    wire mult : SInt<16> @[vtaGEMM.scala 17:18]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 18:31]
     rA <= io.a @[vtaGEMM.scala 18:31]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 19:31]
     rB <= io.b @[vtaGEMM.scala 19:31]
-    reg rC : UInt, clock with :
+    reg rC : SInt, clock with :
       reset => (UInt<1>("h0"), rC) @[vtaGEMM.scala 20:31]
     rC <= io.c @[vtaGEMM.scala 20:31]
     node _mult_T = mul(rA, rB) @[vtaGEMM.scala 22:14]
@@ -334,16 +334,16 @@ circuit shellSimple :
   module MAC_2 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>, flip b : UInt<8>, flip c : UInt<1>, y : UInt<17>}
+    output io : { flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<1>, y : SInt<17>}
 
-    wire mult : UInt<16> @[vtaGEMM.scala 17:18]
-    reg rA : UInt, clock with :
+    wire mult : SInt<16> @[vtaGEMM.scala 17:18]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 18:31]
     rA <= io.a @[vtaGEMM.scala 18:31]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 19:31]
     rB <= io.b @[vtaGEMM.scala 19:31]
-    reg rC : UInt, clock with :
+    reg rC : SInt, clock with :
       reset => (UInt<1>("h0"), rC) @[vtaGEMM.scala 20:31]
     rC <= io.c @[vtaGEMM.scala 20:31]
     node _mult_T = mul(rA, rB) @[vtaGEMM.scala 22:14]
@@ -354,16 +354,16 @@ circuit shellSimple :
   module MAC_3 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>, flip b : UInt<8>, flip c : UInt<1>, y : UInt<17>}
+    output io : { flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<1>, y : SInt<17>}
 
-    wire mult : UInt<16> @[vtaGEMM.scala 17:18]
-    reg rA : UInt, clock with :
+    wire mult : SInt<16> @[vtaGEMM.scala 17:18]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 18:31]
     rA <= io.a @[vtaGEMM.scala 18:31]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 19:31]
     rB <= io.b @[vtaGEMM.scala 19:31]
-    reg rC : UInt, clock with :
+    reg rC : SInt, clock with :
       reset => (UInt<1>("h0"), rC) @[vtaGEMM.scala 20:31]
     rC <= io.c @[vtaGEMM.scala 20:31]
     node _mult_T = mul(rA, rB) @[vtaGEMM.scala 22:14]
@@ -374,16 +374,16 @@ circuit shellSimple :
   module MAC_4 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>, flip b : UInt<8>, flip c : UInt<1>, y : UInt<17>}
+    output io : { flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<1>, y : SInt<17>}
 
-    wire mult : UInt<16> @[vtaGEMM.scala 17:18]
-    reg rA : UInt, clock with :
+    wire mult : SInt<16> @[vtaGEMM.scala 17:18]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 18:31]
     rA <= io.a @[vtaGEMM.scala 18:31]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 19:31]
     rB <= io.b @[vtaGEMM.scala 19:31]
-    reg rC : UInt, clock with :
+    reg rC : SInt, clock with :
       reset => (UInt<1>("h0"), rC) @[vtaGEMM.scala 20:31]
     rC <= io.c @[vtaGEMM.scala 20:31]
     node _mult_T = mul(rA, rB) @[vtaGEMM.scala 22:14]
@@ -394,16 +394,16 @@ circuit shellSimple :
   module MAC_5 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>, flip b : UInt<8>, flip c : UInt<1>, y : UInt<17>}
+    output io : { flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<1>, y : SInt<17>}
 
-    wire mult : UInt<16> @[vtaGEMM.scala 17:18]
-    reg rA : UInt, clock with :
+    wire mult : SInt<16> @[vtaGEMM.scala 17:18]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 18:31]
     rA <= io.a @[vtaGEMM.scala 18:31]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 19:31]
     rB <= io.b @[vtaGEMM.scala 19:31]
-    reg rC : UInt, clock with :
+    reg rC : SInt, clock with :
       reset => (UInt<1>("h0"), rC) @[vtaGEMM.scala 20:31]
     rC <= io.c @[vtaGEMM.scala 20:31]
     node _mult_T = mul(rA, rB) @[vtaGEMM.scala 22:14]
@@ -414,16 +414,16 @@ circuit shellSimple :
   module MAC_6 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>, flip b : UInt<8>, flip c : UInt<1>, y : UInt<17>}
+    output io : { flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<1>, y : SInt<17>}
 
-    wire mult : UInt<16> @[vtaGEMM.scala 17:18]
-    reg rA : UInt, clock with :
+    wire mult : SInt<16> @[vtaGEMM.scala 17:18]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 18:31]
     rA <= io.a @[vtaGEMM.scala 18:31]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 19:31]
     rB <= io.b @[vtaGEMM.scala 19:31]
-    reg rC : UInt, clock with :
+    reg rC : SInt, clock with :
       reset => (UInt<1>("h0"), rC) @[vtaGEMM.scala 20:31]
     rC <= io.c @[vtaGEMM.scala 20:31]
     node _mult_T = mul(rA, rB) @[vtaGEMM.scala 22:14]
@@ -434,16 +434,16 @@ circuit shellSimple :
   module MAC_7 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>, flip b : UInt<8>, flip c : UInt<1>, y : UInt<17>}
+    output io : { flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<1>, y : SInt<17>}
 
-    wire mult : UInt<16> @[vtaGEMM.scala 17:18]
-    reg rA : UInt, clock with :
+    wire mult : SInt<16> @[vtaGEMM.scala 17:18]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 18:31]
     rA <= io.a @[vtaGEMM.scala 18:31]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 19:31]
     rB <= io.b @[vtaGEMM.scala 19:31]
-    reg rC : UInt, clock with :
+    reg rC : SInt, clock with :
       reset => (UInt<1>("h0"), rC) @[vtaGEMM.scala 20:31]
     rC <= io.c @[vtaGEMM.scala 20:31]
     node _mult_T = mul(rA, rB) @[vtaGEMM.scala 22:14]
@@ -454,16 +454,16 @@ circuit shellSimple :
   module MAC_8 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>, flip b : UInt<8>, flip c : UInt<1>, y : UInt<17>}
+    output io : { flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<1>, y : SInt<17>}
 
-    wire mult : UInt<16> @[vtaGEMM.scala 17:18]
-    reg rA : UInt, clock with :
+    wire mult : SInt<16> @[vtaGEMM.scala 17:18]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 18:31]
     rA <= io.a @[vtaGEMM.scala 18:31]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 19:31]
     rB <= io.b @[vtaGEMM.scala 19:31]
-    reg rC : UInt, clock with :
+    reg rC : SInt, clock with :
       reset => (UInt<1>("h0"), rC) @[vtaGEMM.scala 20:31]
     rC <= io.c @[vtaGEMM.scala 20:31]
     node _mult_T = mul(rA, rB) @[vtaGEMM.scala 22:14]
@@ -474,16 +474,16 @@ circuit shellSimple :
   module MAC_9 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>, flip b : UInt<8>, flip c : UInt<1>, y : UInt<17>}
+    output io : { flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<1>, y : SInt<17>}
 
-    wire mult : UInt<16> @[vtaGEMM.scala 17:18]
-    reg rA : UInt, clock with :
+    wire mult : SInt<16> @[vtaGEMM.scala 17:18]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 18:31]
     rA <= io.a @[vtaGEMM.scala 18:31]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 19:31]
     rB <= io.b @[vtaGEMM.scala 19:31]
-    reg rC : UInt, clock with :
+    reg rC : SInt, clock with :
       reset => (UInt<1>("h0"), rC) @[vtaGEMM.scala 20:31]
     rC <= io.c @[vtaGEMM.scala 20:31]
     node _mult_T = mul(rA, rB) @[vtaGEMM.scala 22:14]
@@ -494,16 +494,16 @@ circuit shellSimple :
   module MAC_10 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>, flip b : UInt<8>, flip c : UInt<1>, y : UInt<17>}
+    output io : { flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<1>, y : SInt<17>}
 
-    wire mult : UInt<16> @[vtaGEMM.scala 17:18]
-    reg rA : UInt, clock with :
+    wire mult : SInt<16> @[vtaGEMM.scala 17:18]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 18:31]
     rA <= io.a @[vtaGEMM.scala 18:31]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 19:31]
     rB <= io.b @[vtaGEMM.scala 19:31]
-    reg rC : UInt, clock with :
+    reg rC : SInt, clock with :
       reset => (UInt<1>("h0"), rC) @[vtaGEMM.scala 20:31]
     rC <= io.c @[vtaGEMM.scala 20:31]
     node _mult_T = mul(rA, rB) @[vtaGEMM.scala 22:14]
@@ -514,16 +514,16 @@ circuit shellSimple :
   module MAC_11 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>, flip b : UInt<8>, flip c : UInt<1>, y : UInt<17>}
+    output io : { flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<1>, y : SInt<17>}
 
-    wire mult : UInt<16> @[vtaGEMM.scala 17:18]
-    reg rA : UInt, clock with :
+    wire mult : SInt<16> @[vtaGEMM.scala 17:18]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 18:31]
     rA <= io.a @[vtaGEMM.scala 18:31]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 19:31]
     rB <= io.b @[vtaGEMM.scala 19:31]
-    reg rC : UInt, clock with :
+    reg rC : SInt, clock with :
       reset => (UInt<1>("h0"), rC) @[vtaGEMM.scala 20:31]
     rC <= io.c @[vtaGEMM.scala 20:31]
     node _mult_T = mul(rA, rB) @[vtaGEMM.scala 22:14]
@@ -534,16 +534,16 @@ circuit shellSimple :
   module MAC_12 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>, flip b : UInt<8>, flip c : UInt<1>, y : UInt<17>}
+    output io : { flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<1>, y : SInt<17>}
 
-    wire mult : UInt<16> @[vtaGEMM.scala 17:18]
-    reg rA : UInt, clock with :
+    wire mult : SInt<16> @[vtaGEMM.scala 17:18]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 18:31]
     rA <= io.a @[vtaGEMM.scala 18:31]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 19:31]
     rB <= io.b @[vtaGEMM.scala 19:31]
-    reg rC : UInt, clock with :
+    reg rC : SInt, clock with :
       reset => (UInt<1>("h0"), rC) @[vtaGEMM.scala 20:31]
     rC <= io.c @[vtaGEMM.scala 20:31]
     node _mult_T = mul(rA, rB) @[vtaGEMM.scala 22:14]
@@ -554,16 +554,16 @@ circuit shellSimple :
   module MAC_13 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>, flip b : UInt<8>, flip c : UInt<1>, y : UInt<17>}
+    output io : { flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<1>, y : SInt<17>}
 
-    wire mult : UInt<16> @[vtaGEMM.scala 17:18]
-    reg rA : UInt, clock with :
+    wire mult : SInt<16> @[vtaGEMM.scala 17:18]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 18:31]
     rA <= io.a @[vtaGEMM.scala 18:31]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 19:31]
     rB <= io.b @[vtaGEMM.scala 19:31]
-    reg rC : UInt, clock with :
+    reg rC : SInt, clock with :
       reset => (UInt<1>("h0"), rC) @[vtaGEMM.scala 20:31]
     rC <= io.c @[vtaGEMM.scala 20:31]
     node _mult_T = mul(rA, rB) @[vtaGEMM.scala 22:14]
@@ -574,16 +574,16 @@ circuit shellSimple :
   module MAC_14 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>, flip b : UInt<8>, flip c : UInt<1>, y : UInt<17>}
+    output io : { flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<1>, y : SInt<17>}
 
-    wire mult : UInt<16> @[vtaGEMM.scala 17:18]
-    reg rA : UInt, clock with :
+    wire mult : SInt<16> @[vtaGEMM.scala 17:18]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 18:31]
     rA <= io.a @[vtaGEMM.scala 18:31]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 19:31]
     rB <= io.b @[vtaGEMM.scala 19:31]
-    reg rC : UInt, clock with :
+    reg rC : SInt, clock with :
       reset => (UInt<1>("h0"), rC) @[vtaGEMM.scala 20:31]
     rC <= io.c @[vtaGEMM.scala 20:31]
     node _mult_T = mul(rA, rB) @[vtaGEMM.scala 22:14]
@@ -594,16 +594,16 @@ circuit shellSimple :
   module MAC_15 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>, flip b : UInt<8>, flip c : UInt<1>, y : UInt<17>}
+    output io : { flip a : SInt<8>, flip b : SInt<8>, flip c : SInt<1>, y : SInt<17>}
 
-    wire mult : UInt<16> @[vtaGEMM.scala 17:18]
-    reg rA : UInt, clock with :
+    wire mult : SInt<16> @[vtaGEMM.scala 17:18]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 18:31]
     rA <= io.a @[vtaGEMM.scala 18:31]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 19:31]
     rB <= io.b @[vtaGEMM.scala 19:31]
-    reg rC : UInt, clock with :
+    reg rC : SInt, clock with :
       reset => (UInt<1>("h0"), rC) @[vtaGEMM.scala 20:31]
     rC <= io.c @[vtaGEMM.scala 20:31]
     node _mult_T = mul(rA, rB) @[vtaGEMM.scala 22:14]
@@ -614,11 +614,11 @@ circuit shellSimple :
   module Adder :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<17>, flip b : UInt<17>, y : UInt<18>}
+    output io : { flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
 
-    wire add : UInt<18> @[vtaGEMM.scala 56:17]
-    wire rA : UInt<17> @[vtaGEMM.scala 57:16]
-    wire rB : UInt<17> @[vtaGEMM.scala 58:16]
+    wire add : SInt<18> @[vtaGEMM.scala 56:17]
+    wire rA : SInt<17> @[vtaGEMM.scala 57:16]
+    wire rB : SInt<17> @[vtaGEMM.scala 58:16]
     rA <= io.a @[vtaGEMM.scala 59:6]
     rB <= io.b @[vtaGEMM.scala 60:6]
     node _add_T = add(rA, rB) @[vtaGEMM.scala 61:13]
@@ -628,11 +628,11 @@ circuit shellSimple :
   module Adder_1 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<17>, flip b : UInt<17>, y : UInt<18>}
+    output io : { flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
 
-    wire add : UInt<18> @[vtaGEMM.scala 56:17]
-    wire rA : UInt<17> @[vtaGEMM.scala 57:16]
-    wire rB : UInt<17> @[vtaGEMM.scala 58:16]
+    wire add : SInt<18> @[vtaGEMM.scala 56:17]
+    wire rA : SInt<17> @[vtaGEMM.scala 57:16]
+    wire rB : SInt<17> @[vtaGEMM.scala 58:16]
     rA <= io.a @[vtaGEMM.scala 59:6]
     rB <= io.b @[vtaGEMM.scala 60:6]
     node _add_T = add(rA, rB) @[vtaGEMM.scala 61:13]
@@ -642,11 +642,11 @@ circuit shellSimple :
   module Adder_2 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<17>, flip b : UInt<17>, y : UInt<18>}
+    output io : { flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
 
-    wire add : UInt<18> @[vtaGEMM.scala 56:17]
-    wire rA : UInt<17> @[vtaGEMM.scala 57:16]
-    wire rB : UInt<17> @[vtaGEMM.scala 58:16]
+    wire add : SInt<18> @[vtaGEMM.scala 56:17]
+    wire rA : SInt<17> @[vtaGEMM.scala 57:16]
+    wire rB : SInt<17> @[vtaGEMM.scala 58:16]
     rA <= io.a @[vtaGEMM.scala 59:6]
     rB <= io.b @[vtaGEMM.scala 60:6]
     node _add_T = add(rA, rB) @[vtaGEMM.scala 61:13]
@@ -656,11 +656,11 @@ circuit shellSimple :
   module Adder_3 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<17>, flip b : UInt<17>, y : UInt<18>}
+    output io : { flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
 
-    wire add : UInt<18> @[vtaGEMM.scala 56:17]
-    wire rA : UInt<17> @[vtaGEMM.scala 57:16]
-    wire rB : UInt<17> @[vtaGEMM.scala 58:16]
+    wire add : SInt<18> @[vtaGEMM.scala 56:17]
+    wire rA : SInt<17> @[vtaGEMM.scala 57:16]
+    wire rB : SInt<17> @[vtaGEMM.scala 58:16]
     rA <= io.a @[vtaGEMM.scala 59:6]
     rB <= io.b @[vtaGEMM.scala 60:6]
     node _add_T = add(rA, rB) @[vtaGEMM.scala 61:13]
@@ -670,11 +670,11 @@ circuit shellSimple :
   module Adder_4 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<17>, flip b : UInt<17>, y : UInt<18>}
+    output io : { flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
 
-    wire add : UInt<18> @[vtaGEMM.scala 56:17]
-    wire rA : UInt<17> @[vtaGEMM.scala 57:16]
-    wire rB : UInt<17> @[vtaGEMM.scala 58:16]
+    wire add : SInt<18> @[vtaGEMM.scala 56:17]
+    wire rA : SInt<17> @[vtaGEMM.scala 57:16]
+    wire rB : SInt<17> @[vtaGEMM.scala 58:16]
     rA <= io.a @[vtaGEMM.scala 59:6]
     rB <= io.b @[vtaGEMM.scala 60:6]
     node _add_T = add(rA, rB) @[vtaGEMM.scala 61:13]
@@ -684,11 +684,11 @@ circuit shellSimple :
   module Adder_5 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<17>, flip b : UInt<17>, y : UInt<18>}
+    output io : { flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
 
-    wire add : UInt<18> @[vtaGEMM.scala 56:17]
-    wire rA : UInt<17> @[vtaGEMM.scala 57:16]
-    wire rB : UInt<17> @[vtaGEMM.scala 58:16]
+    wire add : SInt<18> @[vtaGEMM.scala 56:17]
+    wire rA : SInt<17> @[vtaGEMM.scala 57:16]
+    wire rB : SInt<17> @[vtaGEMM.scala 58:16]
     rA <= io.a @[vtaGEMM.scala 59:6]
     rB <= io.b @[vtaGEMM.scala 60:6]
     node _add_T = add(rA, rB) @[vtaGEMM.scala 61:13]
@@ -698,11 +698,11 @@ circuit shellSimple :
   module Adder_6 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<17>, flip b : UInt<17>, y : UInt<18>}
+    output io : { flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
 
-    wire add : UInt<18> @[vtaGEMM.scala 56:17]
-    wire rA : UInt<17> @[vtaGEMM.scala 57:16]
-    wire rB : UInt<17> @[vtaGEMM.scala 58:16]
+    wire add : SInt<18> @[vtaGEMM.scala 56:17]
+    wire rA : SInt<17> @[vtaGEMM.scala 57:16]
+    wire rB : SInt<17> @[vtaGEMM.scala 58:16]
     rA <= io.a @[vtaGEMM.scala 59:6]
     rB <= io.b @[vtaGEMM.scala 60:6]
     node _add_T = add(rA, rB) @[vtaGEMM.scala 61:13]
@@ -712,11 +712,11 @@ circuit shellSimple :
   module Adder_7 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<17>, flip b : UInt<17>, y : UInt<18>}
+    output io : { flip a : SInt<17>, flip b : SInt<17>, y : SInt<18>}
 
-    wire add : UInt<18> @[vtaGEMM.scala 56:17]
-    wire rA : UInt<17> @[vtaGEMM.scala 57:16]
-    wire rB : UInt<17> @[vtaGEMM.scala 58:16]
+    wire add : SInt<18> @[vtaGEMM.scala 56:17]
+    wire rA : SInt<17> @[vtaGEMM.scala 57:16]
+    wire rB : SInt<17> @[vtaGEMM.scala 58:16]
     rA <= io.a @[vtaGEMM.scala 59:6]
     rB <= io.b @[vtaGEMM.scala 60:6]
     node _add_T = add(rA, rB) @[vtaGEMM.scala 61:13]
@@ -726,11 +726,11 @@ circuit shellSimple :
   module Adder_8 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<18>, flip b : UInt<18>, y : UInt<19>}
+    output io : { flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
 
-    wire add : UInt<19> @[vtaGEMM.scala 56:17]
-    wire rA : UInt<18> @[vtaGEMM.scala 57:16]
-    wire rB : UInt<18> @[vtaGEMM.scala 58:16]
+    wire add : SInt<19> @[vtaGEMM.scala 56:17]
+    wire rA : SInt<18> @[vtaGEMM.scala 57:16]
+    wire rB : SInt<18> @[vtaGEMM.scala 58:16]
     rA <= io.a @[vtaGEMM.scala 59:6]
     rB <= io.b @[vtaGEMM.scala 60:6]
     node _add_T = add(rA, rB) @[vtaGEMM.scala 61:13]
@@ -740,11 +740,11 @@ circuit shellSimple :
   module Adder_9 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<18>, flip b : UInt<18>, y : UInt<19>}
+    output io : { flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
 
-    wire add : UInt<19> @[vtaGEMM.scala 56:17]
-    wire rA : UInt<18> @[vtaGEMM.scala 57:16]
-    wire rB : UInt<18> @[vtaGEMM.scala 58:16]
+    wire add : SInt<19> @[vtaGEMM.scala 56:17]
+    wire rA : SInt<18> @[vtaGEMM.scala 57:16]
+    wire rB : SInt<18> @[vtaGEMM.scala 58:16]
     rA <= io.a @[vtaGEMM.scala 59:6]
     rB <= io.b @[vtaGEMM.scala 60:6]
     node _add_T = add(rA, rB) @[vtaGEMM.scala 61:13]
@@ -754,11 +754,11 @@ circuit shellSimple :
   module Adder_10 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<18>, flip b : UInt<18>, y : UInt<19>}
+    output io : { flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
 
-    wire add : UInt<19> @[vtaGEMM.scala 56:17]
-    wire rA : UInt<18> @[vtaGEMM.scala 57:16]
-    wire rB : UInt<18> @[vtaGEMM.scala 58:16]
+    wire add : SInt<19> @[vtaGEMM.scala 56:17]
+    wire rA : SInt<18> @[vtaGEMM.scala 57:16]
+    wire rB : SInt<18> @[vtaGEMM.scala 58:16]
     rA <= io.a @[vtaGEMM.scala 59:6]
     rB <= io.b @[vtaGEMM.scala 60:6]
     node _add_T = add(rA, rB) @[vtaGEMM.scala 61:13]
@@ -768,11 +768,11 @@ circuit shellSimple :
   module Adder_11 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<18>, flip b : UInt<18>, y : UInt<19>}
+    output io : { flip a : SInt<18>, flip b : SInt<18>, y : SInt<19>}
 
-    wire add : UInt<19> @[vtaGEMM.scala 56:17]
-    wire rA : UInt<18> @[vtaGEMM.scala 57:16]
-    wire rB : UInt<18> @[vtaGEMM.scala 58:16]
+    wire add : SInt<19> @[vtaGEMM.scala 56:17]
+    wire rA : SInt<18> @[vtaGEMM.scala 57:16]
+    wire rB : SInt<18> @[vtaGEMM.scala 58:16]
     rA <= io.a @[vtaGEMM.scala 59:6]
     rB <= io.b @[vtaGEMM.scala 60:6]
     node _add_T = add(rA, rB) @[vtaGEMM.scala 61:13]
@@ -782,13 +782,13 @@ circuit shellSimple :
   module PipeAdder :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<19>, flip b : UInt<19>, y : UInt<20>}
+    output io : { flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
 
-    wire add : UInt<20> @[vtaGEMM.scala 42:17]
-    reg rA : UInt, clock with :
+    wire add : SInt<20> @[vtaGEMM.scala 42:17]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 43:19]
     rA <= io.a @[vtaGEMM.scala 43:19]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 44:19]
     rB <= io.b @[vtaGEMM.scala 44:19]
     node _add_T = add(rA, rB) @[vtaGEMM.scala 45:13]
@@ -798,13 +798,13 @@ circuit shellSimple :
   module PipeAdder_1 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<19>, flip b : UInt<19>, y : UInt<20>}
+    output io : { flip a : SInt<19>, flip b : SInt<19>, y : SInt<20>}
 
-    wire add : UInt<20> @[vtaGEMM.scala 42:17]
-    reg rA : UInt, clock with :
+    wire add : SInt<20> @[vtaGEMM.scala 42:17]
+    reg rA : SInt, clock with :
       reset => (UInt<1>("h0"), rA) @[vtaGEMM.scala 43:19]
     rA <= io.a @[vtaGEMM.scala 43:19]
-    reg rB : UInt, clock with :
+    reg rB : SInt, clock with :
       reset => (UInt<1>("h0"), rB) @[vtaGEMM.scala 44:19]
     rB <= io.b @[vtaGEMM.scala 44:19]
     node _add_T = add(rA, rB) @[vtaGEMM.scala 45:13]
@@ -814,11 +814,11 @@ circuit shellSimple :
   module Adder_12 :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<20>, flip b : UInt<20>, y : UInt<21>}
+    output io : { flip a : SInt<20>, flip b : SInt<20>, y : SInt<21>}
 
-    wire add : UInt<21> @[vtaGEMM.scala 56:17]
-    wire rA : UInt<20> @[vtaGEMM.scala 57:16]
-    wire rB : UInt<20> @[vtaGEMM.scala 58:16]
+    wire add : SInt<21> @[vtaGEMM.scala 56:17]
+    wire rA : SInt<20> @[vtaGEMM.scala 57:16]
+    wire rB : SInt<20> @[vtaGEMM.scala 58:16]
     rA <= io.a @[vtaGEMM.scala 59:6]
     rB <= io.b @[vtaGEMM.scala 60:6]
     node _add_T = add(rA, rB) @[vtaGEMM.scala 61:13]
@@ -828,7 +828,7 @@ circuit shellSimple :
   module DotProduct :
     input clock : Clock
     input reset : Reset
-    output io : { flip a : UInt<8>[16], flip b : UInt<8>[16], y : UInt<21>}
+    output io : { flip a : SInt<8>[16], flip b : SInt<8>[16], y : SInt<21>}
 
     inst m_0 of MAC @[vtaGEMM.scala 80:32]
     m_0.clock <= clock
@@ -925,52 +925,52 @@ circuit shellSimple :
     a_3_0.reset <= reset
     m_0.io.a <= io.a[0] @[vtaGEMM.scala 94:15]
     m_0.io.b <= io.b[0] @[vtaGEMM.scala 95:15]
-    m_0.io.c <= UInt<1>("h0") @[vtaGEMM.scala 96:15]
+    m_0.io.c <= asSInt(UInt<1>("h0")) @[vtaGEMM.scala 96:15]
     m_1.io.a <= io.a[1] @[vtaGEMM.scala 94:15]
     m_1.io.b <= io.b[1] @[vtaGEMM.scala 95:15]
-    m_1.io.c <= UInt<1>("h0") @[vtaGEMM.scala 96:15]
+    m_1.io.c <= asSInt(UInt<1>("h0")) @[vtaGEMM.scala 96:15]
     m_2.io.a <= io.a[2] @[vtaGEMM.scala 94:15]
     m_2.io.b <= io.b[2] @[vtaGEMM.scala 95:15]
-    m_2.io.c <= UInt<1>("h0") @[vtaGEMM.scala 96:15]
+    m_2.io.c <= asSInt(UInt<1>("h0")) @[vtaGEMM.scala 96:15]
     m_3.io.a <= io.a[3] @[vtaGEMM.scala 94:15]
     m_3.io.b <= io.b[3] @[vtaGEMM.scala 95:15]
-    m_3.io.c <= UInt<1>("h0") @[vtaGEMM.scala 96:15]
+    m_3.io.c <= asSInt(UInt<1>("h0")) @[vtaGEMM.scala 96:15]
     m_4.io.a <= io.a[4] @[vtaGEMM.scala 94:15]
     m_4.io.b <= io.b[4] @[vtaGEMM.scala 95:15]
-    m_4.io.c <= UInt<1>("h0") @[vtaGEMM.scala 96:15]
+    m_4.io.c <= asSInt(UInt<1>("h0")) @[vtaGEMM.scala 96:15]
     m_5.io.a <= io.a[5] @[vtaGEMM.scala 94:15]
     m_5.io.b <= io.b[5] @[vtaGEMM.scala 95:15]
-    m_5.io.c <= UInt<1>("h0") @[vtaGEMM.scala 96:15]
+    m_5.io.c <= asSInt(UInt<1>("h0")) @[vtaGEMM.scala 96:15]
     m_6.io.a <= io.a[6] @[vtaGEMM.scala 94:15]
     m_6.io.b <= io.b[6] @[vtaGEMM.scala 95:15]
-    m_6.io.c <= UInt<1>("h0") @[vtaGEMM.scala 96:15]
+    m_6.io.c <= asSInt(UInt<1>("h0")) @[vtaGEMM.scala 96:15]
     m_7.io.a <= io.a[7] @[vtaGEMM.scala 94:15]
     m_7.io.b <= io.b[7] @[vtaGEMM.scala 95:15]
-    m_7.io.c <= UInt<1>("h0") @[vtaGEMM.scala 96:15]
+    m_7.io.c <= asSInt(UInt<1>("h0")) @[vtaGEMM.scala 96:15]
     m_8.io.a <= io.a[8] @[vtaGEMM.scala 94:15]
     m_8.io.b <= io.b[8] @[vtaGEMM.scala 95:15]
-    m_8.io.c <= UInt<1>("h0") @[vtaGEMM.scala 96:15]
+    m_8.io.c <= asSInt(UInt<1>("h0")) @[vtaGEMM.scala 96:15]
     m_9.io.a <= io.a[9] @[vtaGEMM.scala 94:15]
     m_9.io.b <= io.b[9] @[vtaGEMM.scala 95:15]
-    m_9.io.c <= UInt<1>("h0") @[vtaGEMM.scala 96:15]
+    m_9.io.c <= asSInt(UInt<1>("h0")) @[vtaGEMM.scala 96:15]
     m_10.io.a <= io.a[10] @[vtaGEMM.scala 94:15]
     m_10.io.b <= io.b[10] @[vtaGEMM.scala 95:15]
-    m_10.io.c <= UInt<1>("h0") @[vtaGEMM.scala 96:15]
+    m_10.io.c <= asSInt(UInt<1>("h0")) @[vtaGEMM.scala 96:15]
     m_11.io.a <= io.a[11] @[vtaGEMM.scala 94:15]
     m_11.io.b <= io.b[11] @[vtaGEMM.scala 95:15]
-    m_11.io.c <= UInt<1>("h0") @[vtaGEMM.scala 96:15]
+    m_11.io.c <= asSInt(UInt<1>("h0")) @[vtaGEMM.scala 96:15]
     m_12.io.a <= io.a[12] @[vtaGEMM.scala 94:15]
     m_12.io.b <= io.b[12] @[vtaGEMM.scala 95:15]
-    m_12.io.c <= UInt<1>("h0") @[vtaGEMM.scala 96:15]
+    m_12.io.c <= asSInt(UInt<1>("h0")) @[vtaGEMM.scala 96:15]
     m_13.io.a <= io.a[13] @[vtaGEMM.scala 94:15]
     m_13.io.b <= io.b[13] @[vtaGEMM.scala 95:15]
-    m_13.io.c <= UInt<1>("h0") @[vtaGEMM.scala 96:15]
+    m_13.io.c <= asSInt(UInt<1>("h0")) @[vtaGEMM.scala 96:15]
     m_14.io.a <= io.a[14] @[vtaGEMM.scala 94:15]
     m_14.io.b <= io.b[14] @[vtaGEMM.scala 95:15]
-    m_14.io.c <= UInt<1>("h0") @[vtaGEMM.scala 96:15]
+    m_14.io.c <= asSInt(UInt<1>("h0")) @[vtaGEMM.scala 96:15]
     m_15.io.a <= io.a[15] @[vtaGEMM.scala 94:15]
     m_15.io.b <= io.b[15] @[vtaGEMM.scala 95:15]
-    m_15.io.c <= UInt<1>("h0") @[vtaGEMM.scala 96:15]
+    m_15.io.c <= asSInt(UInt<1>("h0")) @[vtaGEMM.scala 96:15]
     a_0_0.io.a <= m_0.io.y @[vtaGEMM.scala 104:22]
     a_0_0.io.b <= m_1.io.y @[vtaGEMM.scala 105:22]
     a_0_1.io.a <= m_2.io.y @[vtaGEMM.scala 104:22]
@@ -1022,264 +1022,305 @@ circuit shellSimple :
       reset => (UInt<1>("h0"), io_deq_outPipe_bits) @[Reg.scala 16:16]
     when io_deq_v : @[Reg.scala 17:18]
       io_deq_outPipe_bits <= io_deq_b @[Reg.scala 17:22]
+    reg io_deq_outPipe_valid_1 : UInt<1>, clock with :
+      reset => (reset, UInt<1>("h0")) @[Valid.scala 127:22]
+    io_deq_outPipe_valid_1 <= io_deq_outPipe_valid @[Valid.scala 127:22]
+    reg io_deq_outPipe_bits_1 : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), io_deq_outPipe_bits_1) @[Reg.scala 16:16]
+    when io_deq_outPipe_valid : @[Reg.scala 17:18]
+      io_deq_outPipe_bits_1 <= io_deq_outPipe_bits @[Reg.scala 17:22]
     wire io_deq_out : { valid : UInt<1>, bits : UInt<1>} @[Valid.scala 122:21]
-    io_deq_out.valid <= io_deq_outPipe_valid @[Valid.scala 123:17]
-    io_deq_out.bits <= io_deq_outPipe_bits @[Valid.scala 124:16]
+    io_deq_out.valid <= io_deq_outPipe_valid_1 @[Valid.scala 123:17]
+    io_deq_out.bits <= io_deq_outPipe_bits_1 @[Valid.scala 124:16]
     io.deq.bits <= io_deq_out.bits @[Valid.scala 202:10]
     io.deq.valid <= io_deq_out.valid @[Valid.scala 202:10]
 
-  module ComputSimple :
+  module ComputeSimple :
     input clock : Clock
     input reset : Reset
     output io : { core : { flip start : UInt<1>, flip input : UInt<32>[4], flip weight : UInt<32>[4], done : UInt<1>, result : UInt<32>}, interrupt : UInt<1>}
 
-    inst dot of DotProduct @[compute.scala 16:21]
+    inst dot of DotProduct @[compute.scala 18:21]
     dot.clock <= clock
     dot.reset <= reset
     reg corestate : UInt<1>, clock with :
-      reset => (reset, UInt<1>("h0")) @[compute.scala 19:28]
-    inst pipe of Pipe @[compute.scala 21:22]
+      reset => (reset, UInt<1>("h0")) @[compute.scala 21:28]
+    inst pipe of Pipe @[compute.scala 23:22]
     pipe.clock <= clock
     pipe.reset <= reset
-    wire vld : UInt<1> @[compute.scala 22:19]
-    pipe.io.enq.valid <= io.core.start @[compute.scala 24:23]
-    pipe.io.enq.bits <= UInt<1>("h1") @[compute.scala 25:22]
-    vld <= pipe.io.deq.valid @[compute.scala 26:9]
-    io.core.done <= vld @[compute.scala 28:18]
-    node _T = eq(UInt<1>("h0"), corestate) @[compute.scala 30:23]
-    when _T : @[compute.scala 30:23]
-      when io.core.start : @[compute.scala 32:33]
-        corestate <= UInt<1>("h1") @[compute.scala 33:27]
+    wire vld : UInt<1> @[compute.scala 24:19]
+    pipe.io.enq.valid <= io.core.start @[compute.scala 26:23]
+    pipe.io.enq.bits <= UInt<1>("h1") @[compute.scala 27:22]
+    vld <= pipe.io.deq.valid @[compute.scala 28:9]
+    io.core.done <= vld @[compute.scala 30:18]
+    node _T = eq(UInt<1>("h0"), corestate) @[compute.scala 32:23]
+    when _T : @[compute.scala 32:23]
+      when io.core.start : @[compute.scala 34:33]
+        corestate <= UInt<1>("h1") @[compute.scala 35:27]
     else :
-      node _T_1 = eq(UInt<1>("h1"), corestate) @[compute.scala 30:23]
-      when _T_1 : @[compute.scala 30:23]
-        when vld : @[compute.scala 37:23]
-          corestate <= UInt<1>("h0") @[compute.scala 38:27]
-    when vld : @[compute.scala 43:14]
-      node _io_core_result_T = cat(UInt<11>("h0"), dot.io.y) @[Cat.scala 31:58]
-      io.core.result <= _io_core_result_T @[compute.scala 44:24]
+      node _T_1 = eq(UInt<1>("h1"), corestate) @[compute.scala 32:23]
+      when _T_1 : @[compute.scala 32:23]
+        when vld : @[compute.scala 39:23]
+          corestate <= UInt<1>("h0") @[compute.scala 40:27]
+    wire result : SInt<32> @[compute.scala 45:22]
+    result <= dot.io.y @[compute.scala 46:12]
+    when vld : @[compute.scala 47:14]
+      node _io_core_result_T = asUInt(result) @[compute.scala 48:40]
+      io.core.result <= _io_core_result_T @[compute.scala 48:24]
     else :
-      io.core.result <= UInt<32>("h0") @[compute.scala 47:24]
-    wire _input_WIRE : UInt<8>[16] @[compute.scala 50:32]
-    _input_WIRE[0] <= UInt<8>("h0") @[compute.scala 50:32]
-    _input_WIRE[1] <= UInt<8>("h0") @[compute.scala 50:32]
-    _input_WIRE[2] <= UInt<8>("h0") @[compute.scala 50:32]
-    _input_WIRE[3] <= UInt<8>("h0") @[compute.scala 50:32]
-    _input_WIRE[4] <= UInt<8>("h0") @[compute.scala 50:32]
-    _input_WIRE[5] <= UInt<8>("h0") @[compute.scala 50:32]
-    _input_WIRE[6] <= UInt<8>("h0") @[compute.scala 50:32]
-    _input_WIRE[7] <= UInt<8>("h0") @[compute.scala 50:32]
-    _input_WIRE[8] <= UInt<8>("h0") @[compute.scala 50:32]
-    _input_WIRE[9] <= UInt<8>("h0") @[compute.scala 50:32]
-    _input_WIRE[10] <= UInt<8>("h0") @[compute.scala 50:32]
-    _input_WIRE[11] <= UInt<8>("h0") @[compute.scala 50:32]
-    _input_WIRE[12] <= UInt<8>("h0") @[compute.scala 50:32]
-    _input_WIRE[13] <= UInt<8>("h0") @[compute.scala 50:32]
-    _input_WIRE[14] <= UInt<8>("h0") @[compute.scala 50:32]
-    _input_WIRE[15] <= UInt<8>("h0") @[compute.scala 50:32]
-    reg input : UInt<8>[16], clock with :
-      reset => (reset, _input_WIRE) @[compute.scala 50:24]
-    wire _weight_WIRE : UInt<8>[16] @[compute.scala 51:33]
-    _weight_WIRE[0] <= UInt<8>("h0") @[compute.scala 51:33]
-    _weight_WIRE[1] <= UInt<8>("h0") @[compute.scala 51:33]
-    _weight_WIRE[2] <= UInt<8>("h0") @[compute.scala 51:33]
-    _weight_WIRE[3] <= UInt<8>("h0") @[compute.scala 51:33]
-    _weight_WIRE[4] <= UInt<8>("h0") @[compute.scala 51:33]
-    _weight_WIRE[5] <= UInt<8>("h0") @[compute.scala 51:33]
-    _weight_WIRE[6] <= UInt<8>("h0") @[compute.scala 51:33]
-    _weight_WIRE[7] <= UInt<8>("h0") @[compute.scala 51:33]
-    _weight_WIRE[8] <= UInt<8>("h0") @[compute.scala 51:33]
-    _weight_WIRE[9] <= UInt<8>("h0") @[compute.scala 51:33]
-    _weight_WIRE[10] <= UInt<8>("h0") @[compute.scala 51:33]
-    _weight_WIRE[11] <= UInt<8>("h0") @[compute.scala 51:33]
-    _weight_WIRE[12] <= UInt<8>("h0") @[compute.scala 51:33]
-    _weight_WIRE[13] <= UInt<8>("h0") @[compute.scala 51:33]
-    _weight_WIRE[14] <= UInt<8>("h0") @[compute.scala 51:33]
-    _weight_WIRE[15] <= UInt<8>("h0") @[compute.scala 51:33]
-    reg weight : UInt<8>[16], clock with :
-      reset => (reset, _weight_WIRE) @[compute.scala 51:25]
-    when io.core.start : @[compute.scala 53:24]
-      node _input_0_T = bits(io.core.input[0], 7, 0) @[compute.scala 56:51]
-      input[0] <= _input_0_T @[compute.scala 56:32]
-      node _weight_0_T = bits(io.core.weight[0], 7, 0) @[compute.scala 57:53]
-      weight[0] <= _weight_0_T @[compute.scala 57:33]
-      node _input_1_T = bits(io.core.input[0], 15, 8) @[compute.scala 56:51]
-      input[1] <= _input_1_T @[compute.scala 56:32]
-      node _weight_1_T = bits(io.core.weight[0], 15, 8) @[compute.scala 57:53]
-      weight[1] <= _weight_1_T @[compute.scala 57:33]
-      node _input_2_T = bits(io.core.input[0], 23, 16) @[compute.scala 56:51]
-      input[2] <= _input_2_T @[compute.scala 56:32]
-      node _weight_2_T = bits(io.core.weight[0], 23, 16) @[compute.scala 57:53]
-      weight[2] <= _weight_2_T @[compute.scala 57:33]
-      node _input_3_T = bits(io.core.input[0], 31, 24) @[compute.scala 56:51]
-      input[3] <= _input_3_T @[compute.scala 56:32]
-      node _weight_3_T = bits(io.core.weight[0], 31, 24) @[compute.scala 57:53]
-      weight[3] <= _weight_3_T @[compute.scala 57:33]
-      node _input_4_T = bits(io.core.input[1], 7, 0) @[compute.scala 56:51]
-      input[4] <= _input_4_T @[compute.scala 56:32]
-      node _weight_4_T = bits(io.core.weight[1], 7, 0) @[compute.scala 57:53]
-      weight[4] <= _weight_4_T @[compute.scala 57:33]
-      node _input_5_T = bits(io.core.input[1], 15, 8) @[compute.scala 56:51]
-      input[5] <= _input_5_T @[compute.scala 56:32]
-      node _weight_5_T = bits(io.core.weight[1], 15, 8) @[compute.scala 57:53]
-      weight[5] <= _weight_5_T @[compute.scala 57:33]
-      node _input_6_T = bits(io.core.input[1], 23, 16) @[compute.scala 56:51]
-      input[6] <= _input_6_T @[compute.scala 56:32]
-      node _weight_6_T = bits(io.core.weight[1], 23, 16) @[compute.scala 57:53]
-      weight[6] <= _weight_6_T @[compute.scala 57:33]
-      node _input_7_T = bits(io.core.input[1], 31, 24) @[compute.scala 56:51]
-      input[7] <= _input_7_T @[compute.scala 56:32]
-      node _weight_7_T = bits(io.core.weight[1], 31, 24) @[compute.scala 57:53]
-      weight[7] <= _weight_7_T @[compute.scala 57:33]
-      node _input_8_T = bits(io.core.input[2], 7, 0) @[compute.scala 56:51]
-      input[8] <= _input_8_T @[compute.scala 56:32]
-      node _weight_8_T = bits(io.core.weight[2], 7, 0) @[compute.scala 57:53]
-      weight[8] <= _weight_8_T @[compute.scala 57:33]
-      node _input_9_T = bits(io.core.input[2], 15, 8) @[compute.scala 56:51]
-      input[9] <= _input_9_T @[compute.scala 56:32]
-      node _weight_9_T = bits(io.core.weight[2], 15, 8) @[compute.scala 57:53]
-      weight[9] <= _weight_9_T @[compute.scala 57:33]
-      node _input_10_T = bits(io.core.input[2], 23, 16) @[compute.scala 56:51]
-      input[10] <= _input_10_T @[compute.scala 56:32]
-      node _weight_10_T = bits(io.core.weight[2], 23, 16) @[compute.scala 57:53]
-      weight[10] <= _weight_10_T @[compute.scala 57:33]
-      node _input_11_T = bits(io.core.input[2], 31, 24) @[compute.scala 56:51]
-      input[11] <= _input_11_T @[compute.scala 56:32]
-      node _weight_11_T = bits(io.core.weight[2], 31, 24) @[compute.scala 57:53]
-      weight[11] <= _weight_11_T @[compute.scala 57:33]
-      node _input_12_T = bits(io.core.input[3], 7, 0) @[compute.scala 56:51]
-      input[12] <= _input_12_T @[compute.scala 56:32]
-      node _weight_12_T = bits(io.core.weight[3], 7, 0) @[compute.scala 57:53]
-      weight[12] <= _weight_12_T @[compute.scala 57:33]
-      node _input_13_T = bits(io.core.input[3], 15, 8) @[compute.scala 56:51]
-      input[13] <= _input_13_T @[compute.scala 56:32]
-      node _weight_13_T = bits(io.core.weight[3], 15, 8) @[compute.scala 57:53]
-      weight[13] <= _weight_13_T @[compute.scala 57:33]
-      node _input_14_T = bits(io.core.input[3], 23, 16) @[compute.scala 56:51]
-      input[14] <= _input_14_T @[compute.scala 56:32]
-      node _weight_14_T = bits(io.core.weight[3], 23, 16) @[compute.scala 57:53]
-      weight[14] <= _weight_14_T @[compute.scala 57:33]
-      node _input_15_T = bits(io.core.input[3], 31, 24) @[compute.scala 56:51]
-      input[15] <= _input_15_T @[compute.scala 56:32]
-      node _weight_15_T = bits(io.core.weight[3], 31, 24) @[compute.scala 57:53]
-      weight[15] <= _weight_15_T @[compute.scala 57:33]
-    dot.io.a[0] <= input[0] @[compute.scala 62:14]
-    dot.io.a[1] <= input[1] @[compute.scala 62:14]
-    dot.io.a[2] <= input[2] @[compute.scala 62:14]
-    dot.io.a[3] <= input[3] @[compute.scala 62:14]
-    dot.io.a[4] <= input[4] @[compute.scala 62:14]
-    dot.io.a[5] <= input[5] @[compute.scala 62:14]
-    dot.io.a[6] <= input[6] @[compute.scala 62:14]
-    dot.io.a[7] <= input[7] @[compute.scala 62:14]
-    dot.io.a[8] <= input[8] @[compute.scala 62:14]
-    dot.io.a[9] <= input[9] @[compute.scala 62:14]
-    dot.io.a[10] <= input[10] @[compute.scala 62:14]
-    dot.io.a[11] <= input[11] @[compute.scala 62:14]
-    dot.io.a[12] <= input[12] @[compute.scala 62:14]
-    dot.io.a[13] <= input[13] @[compute.scala 62:14]
-    dot.io.a[14] <= input[14] @[compute.scala 62:14]
-    dot.io.a[15] <= input[15] @[compute.scala 62:14]
-    dot.io.b[0] <= weight[0] @[compute.scala 63:14]
-    dot.io.b[1] <= weight[1] @[compute.scala 63:14]
-    dot.io.b[2] <= weight[2] @[compute.scala 63:14]
-    dot.io.b[3] <= weight[3] @[compute.scala 63:14]
-    dot.io.b[4] <= weight[4] @[compute.scala 63:14]
-    dot.io.b[5] <= weight[5] @[compute.scala 63:14]
-    dot.io.b[6] <= weight[6] @[compute.scala 63:14]
-    dot.io.b[7] <= weight[7] @[compute.scala 63:14]
-    dot.io.b[8] <= weight[8] @[compute.scala 63:14]
-    dot.io.b[9] <= weight[9] @[compute.scala 63:14]
-    dot.io.b[10] <= weight[10] @[compute.scala 63:14]
-    dot.io.b[11] <= weight[11] @[compute.scala 63:14]
-    dot.io.b[12] <= weight[12] @[compute.scala 63:14]
-    dot.io.b[13] <= weight[13] @[compute.scala 63:14]
-    dot.io.b[14] <= weight[14] @[compute.scala 63:14]
-    dot.io.b[15] <= weight[15] @[compute.scala 63:14]
-    io.interrupt <= vld @[compute.scala 66:18]
+      io.core.result <= UInt<32>("h0") @[compute.scala 51:24]
+    wire _input_WIRE : SInt<8>[16] @[compute.scala 54:32]
+    _input_WIRE[0] <= asSInt(UInt<8>("h0")) @[compute.scala 54:32]
+    _input_WIRE[1] <= asSInt(UInt<8>("h0")) @[compute.scala 54:32]
+    _input_WIRE[2] <= asSInt(UInt<8>("h0")) @[compute.scala 54:32]
+    _input_WIRE[3] <= asSInt(UInt<8>("h0")) @[compute.scala 54:32]
+    _input_WIRE[4] <= asSInt(UInt<8>("h0")) @[compute.scala 54:32]
+    _input_WIRE[5] <= asSInt(UInt<8>("h0")) @[compute.scala 54:32]
+    _input_WIRE[6] <= asSInt(UInt<8>("h0")) @[compute.scala 54:32]
+    _input_WIRE[7] <= asSInt(UInt<8>("h0")) @[compute.scala 54:32]
+    _input_WIRE[8] <= asSInt(UInt<8>("h0")) @[compute.scala 54:32]
+    _input_WIRE[9] <= asSInt(UInt<8>("h0")) @[compute.scala 54:32]
+    _input_WIRE[10] <= asSInt(UInt<8>("h0")) @[compute.scala 54:32]
+    _input_WIRE[11] <= asSInt(UInt<8>("h0")) @[compute.scala 54:32]
+    _input_WIRE[12] <= asSInt(UInt<8>("h0")) @[compute.scala 54:32]
+    _input_WIRE[13] <= asSInt(UInt<8>("h0")) @[compute.scala 54:32]
+    _input_WIRE[14] <= asSInt(UInt<8>("h0")) @[compute.scala 54:32]
+    _input_WIRE[15] <= asSInt(UInt<8>("h0")) @[compute.scala 54:32]
+    reg input : SInt<8>[16], clock with :
+      reset => (reset, _input_WIRE) @[compute.scala 54:24]
+    wire _weight_WIRE : SInt<8>[16] @[compute.scala 55:33]
+    _weight_WIRE[0] <= asSInt(UInt<8>("h0")) @[compute.scala 55:33]
+    _weight_WIRE[1] <= asSInt(UInt<8>("h0")) @[compute.scala 55:33]
+    _weight_WIRE[2] <= asSInt(UInt<8>("h0")) @[compute.scala 55:33]
+    _weight_WIRE[3] <= asSInt(UInt<8>("h0")) @[compute.scala 55:33]
+    _weight_WIRE[4] <= asSInt(UInt<8>("h0")) @[compute.scala 55:33]
+    _weight_WIRE[5] <= asSInt(UInt<8>("h0")) @[compute.scala 55:33]
+    _weight_WIRE[6] <= asSInt(UInt<8>("h0")) @[compute.scala 55:33]
+    _weight_WIRE[7] <= asSInt(UInt<8>("h0")) @[compute.scala 55:33]
+    _weight_WIRE[8] <= asSInt(UInt<8>("h0")) @[compute.scala 55:33]
+    _weight_WIRE[9] <= asSInt(UInt<8>("h0")) @[compute.scala 55:33]
+    _weight_WIRE[10] <= asSInt(UInt<8>("h0")) @[compute.scala 55:33]
+    _weight_WIRE[11] <= asSInt(UInt<8>("h0")) @[compute.scala 55:33]
+    _weight_WIRE[12] <= asSInt(UInt<8>("h0")) @[compute.scala 55:33]
+    _weight_WIRE[13] <= asSInt(UInt<8>("h0")) @[compute.scala 55:33]
+    _weight_WIRE[14] <= asSInt(UInt<8>("h0")) @[compute.scala 55:33]
+    _weight_WIRE[15] <= asSInt(UInt<8>("h0")) @[compute.scala 55:33]
+    reg weight : SInt<8>[16], clock with :
+      reset => (reset, _weight_WIRE) @[compute.scala 55:25]
+    when io.core.start : @[compute.scala 57:24]
+      node _input_0_T = bits(io.core.input[0], 7, 0) @[compute.scala 60:51]
+      node _input_0_T_1 = asSInt(_input_0_T) @[compute.scala 60:72]
+      input[0] <= _input_0_T_1 @[compute.scala 60:32]
+      node _weight_0_T = bits(io.core.weight[0], 7, 0) @[compute.scala 61:53]
+      node _weight_0_T_1 = asSInt(_weight_0_T) @[compute.scala 61:74]
+      weight[0] <= _weight_0_T_1 @[compute.scala 61:33]
+      node _input_1_T = bits(io.core.input[0], 15, 8) @[compute.scala 60:51]
+      node _input_1_T_1 = asSInt(_input_1_T) @[compute.scala 60:72]
+      input[1] <= _input_1_T_1 @[compute.scala 60:32]
+      node _weight_1_T = bits(io.core.weight[0], 15, 8) @[compute.scala 61:53]
+      node _weight_1_T_1 = asSInt(_weight_1_T) @[compute.scala 61:74]
+      weight[1] <= _weight_1_T_1 @[compute.scala 61:33]
+      node _input_2_T = bits(io.core.input[0], 23, 16) @[compute.scala 60:51]
+      node _input_2_T_1 = asSInt(_input_2_T) @[compute.scala 60:72]
+      input[2] <= _input_2_T_1 @[compute.scala 60:32]
+      node _weight_2_T = bits(io.core.weight[0], 23, 16) @[compute.scala 61:53]
+      node _weight_2_T_1 = asSInt(_weight_2_T) @[compute.scala 61:74]
+      weight[2] <= _weight_2_T_1 @[compute.scala 61:33]
+      node _input_3_T = bits(io.core.input[0], 31, 24) @[compute.scala 60:51]
+      node _input_3_T_1 = asSInt(_input_3_T) @[compute.scala 60:72]
+      input[3] <= _input_3_T_1 @[compute.scala 60:32]
+      node _weight_3_T = bits(io.core.weight[0], 31, 24) @[compute.scala 61:53]
+      node _weight_3_T_1 = asSInt(_weight_3_T) @[compute.scala 61:74]
+      weight[3] <= _weight_3_T_1 @[compute.scala 61:33]
+      node _input_4_T = bits(io.core.input[1], 7, 0) @[compute.scala 60:51]
+      node _input_4_T_1 = asSInt(_input_4_T) @[compute.scala 60:72]
+      input[4] <= _input_4_T_1 @[compute.scala 60:32]
+      node _weight_4_T = bits(io.core.weight[1], 7, 0) @[compute.scala 61:53]
+      node _weight_4_T_1 = asSInt(_weight_4_T) @[compute.scala 61:74]
+      weight[4] <= _weight_4_T_1 @[compute.scala 61:33]
+      node _input_5_T = bits(io.core.input[1], 15, 8) @[compute.scala 60:51]
+      node _input_5_T_1 = asSInt(_input_5_T) @[compute.scala 60:72]
+      input[5] <= _input_5_T_1 @[compute.scala 60:32]
+      node _weight_5_T = bits(io.core.weight[1], 15, 8) @[compute.scala 61:53]
+      node _weight_5_T_1 = asSInt(_weight_5_T) @[compute.scala 61:74]
+      weight[5] <= _weight_5_T_1 @[compute.scala 61:33]
+      node _input_6_T = bits(io.core.input[1], 23, 16) @[compute.scala 60:51]
+      node _input_6_T_1 = asSInt(_input_6_T) @[compute.scala 60:72]
+      input[6] <= _input_6_T_1 @[compute.scala 60:32]
+      node _weight_6_T = bits(io.core.weight[1], 23, 16) @[compute.scala 61:53]
+      node _weight_6_T_1 = asSInt(_weight_6_T) @[compute.scala 61:74]
+      weight[6] <= _weight_6_T_1 @[compute.scala 61:33]
+      node _input_7_T = bits(io.core.input[1], 31, 24) @[compute.scala 60:51]
+      node _input_7_T_1 = asSInt(_input_7_T) @[compute.scala 60:72]
+      input[7] <= _input_7_T_1 @[compute.scala 60:32]
+      node _weight_7_T = bits(io.core.weight[1], 31, 24) @[compute.scala 61:53]
+      node _weight_7_T_1 = asSInt(_weight_7_T) @[compute.scala 61:74]
+      weight[7] <= _weight_7_T_1 @[compute.scala 61:33]
+      node _input_8_T = bits(io.core.input[2], 7, 0) @[compute.scala 60:51]
+      node _input_8_T_1 = asSInt(_input_8_T) @[compute.scala 60:72]
+      input[8] <= _input_8_T_1 @[compute.scala 60:32]
+      node _weight_8_T = bits(io.core.weight[2], 7, 0) @[compute.scala 61:53]
+      node _weight_8_T_1 = asSInt(_weight_8_T) @[compute.scala 61:74]
+      weight[8] <= _weight_8_T_1 @[compute.scala 61:33]
+      node _input_9_T = bits(io.core.input[2], 15, 8) @[compute.scala 60:51]
+      node _input_9_T_1 = asSInt(_input_9_T) @[compute.scala 60:72]
+      input[9] <= _input_9_T_1 @[compute.scala 60:32]
+      node _weight_9_T = bits(io.core.weight[2], 15, 8) @[compute.scala 61:53]
+      node _weight_9_T_1 = asSInt(_weight_9_T) @[compute.scala 61:74]
+      weight[9] <= _weight_9_T_1 @[compute.scala 61:33]
+      node _input_10_T = bits(io.core.input[2], 23, 16) @[compute.scala 60:51]
+      node _input_10_T_1 = asSInt(_input_10_T) @[compute.scala 60:72]
+      input[10] <= _input_10_T_1 @[compute.scala 60:32]
+      node _weight_10_T = bits(io.core.weight[2], 23, 16) @[compute.scala 61:53]
+      node _weight_10_T_1 = asSInt(_weight_10_T) @[compute.scala 61:74]
+      weight[10] <= _weight_10_T_1 @[compute.scala 61:33]
+      node _input_11_T = bits(io.core.input[2], 31, 24) @[compute.scala 60:51]
+      node _input_11_T_1 = asSInt(_input_11_T) @[compute.scala 60:72]
+      input[11] <= _input_11_T_1 @[compute.scala 60:32]
+      node _weight_11_T = bits(io.core.weight[2], 31, 24) @[compute.scala 61:53]
+      node _weight_11_T_1 = asSInt(_weight_11_T) @[compute.scala 61:74]
+      weight[11] <= _weight_11_T_1 @[compute.scala 61:33]
+      node _input_12_T = bits(io.core.input[3], 7, 0) @[compute.scala 60:51]
+      node _input_12_T_1 = asSInt(_input_12_T) @[compute.scala 60:72]
+      input[12] <= _input_12_T_1 @[compute.scala 60:32]
+      node _weight_12_T = bits(io.core.weight[3], 7, 0) @[compute.scala 61:53]
+      node _weight_12_T_1 = asSInt(_weight_12_T) @[compute.scala 61:74]
+      weight[12] <= _weight_12_T_1 @[compute.scala 61:33]
+      node _input_13_T = bits(io.core.input[3], 15, 8) @[compute.scala 60:51]
+      node _input_13_T_1 = asSInt(_input_13_T) @[compute.scala 60:72]
+      input[13] <= _input_13_T_1 @[compute.scala 60:32]
+      node _weight_13_T = bits(io.core.weight[3], 15, 8) @[compute.scala 61:53]
+      node _weight_13_T_1 = asSInt(_weight_13_T) @[compute.scala 61:74]
+      weight[13] <= _weight_13_T_1 @[compute.scala 61:33]
+      node _input_14_T = bits(io.core.input[3], 23, 16) @[compute.scala 60:51]
+      node _input_14_T_1 = asSInt(_input_14_T) @[compute.scala 60:72]
+      input[14] <= _input_14_T_1 @[compute.scala 60:32]
+      node _weight_14_T = bits(io.core.weight[3], 23, 16) @[compute.scala 61:53]
+      node _weight_14_T_1 = asSInt(_weight_14_T) @[compute.scala 61:74]
+      weight[14] <= _weight_14_T_1 @[compute.scala 61:33]
+      node _input_15_T = bits(io.core.input[3], 31, 24) @[compute.scala 60:51]
+      node _input_15_T_1 = asSInt(_input_15_T) @[compute.scala 60:72]
+      input[15] <= _input_15_T_1 @[compute.scala 60:32]
+      node _weight_15_T = bits(io.core.weight[3], 31, 24) @[compute.scala 61:53]
+      node _weight_15_T_1 = asSInt(_weight_15_T) @[compute.scala 61:74]
+      weight[15] <= _weight_15_T_1 @[compute.scala 61:33]
+    dot.io.a[0] <= input[0] @[compute.scala 66:14]
+    dot.io.a[1] <= input[1] @[compute.scala 66:14]
+    dot.io.a[2] <= input[2] @[compute.scala 66:14]
+    dot.io.a[3] <= input[3] @[compute.scala 66:14]
+    dot.io.a[4] <= input[4] @[compute.scala 66:14]
+    dot.io.a[5] <= input[5] @[compute.scala 66:14]
+    dot.io.a[6] <= input[6] @[compute.scala 66:14]
+    dot.io.a[7] <= input[7] @[compute.scala 66:14]
+    dot.io.a[8] <= input[8] @[compute.scala 66:14]
+    dot.io.a[9] <= input[9] @[compute.scala 66:14]
+    dot.io.a[10] <= input[10] @[compute.scala 66:14]
+    dot.io.a[11] <= input[11] @[compute.scala 66:14]
+    dot.io.a[12] <= input[12] @[compute.scala 66:14]
+    dot.io.a[13] <= input[13] @[compute.scala 66:14]
+    dot.io.a[14] <= input[14] @[compute.scala 66:14]
+    dot.io.a[15] <= input[15] @[compute.scala 66:14]
+    dot.io.b[0] <= weight[0] @[compute.scala 67:14]
+    dot.io.b[1] <= weight[1] @[compute.scala 67:14]
+    dot.io.b[2] <= weight[2] @[compute.scala 67:14]
+    dot.io.b[3] <= weight[3] @[compute.scala 67:14]
+    dot.io.b[4] <= weight[4] @[compute.scala 67:14]
+    dot.io.b[5] <= weight[5] @[compute.scala 67:14]
+    dot.io.b[6] <= weight[6] @[compute.scala 67:14]
+    dot.io.b[7] <= weight[7] @[compute.scala 67:14]
+    dot.io.b[8] <= weight[8] @[compute.scala 67:14]
+    dot.io.b[9] <= weight[9] @[compute.scala 67:14]
+    dot.io.b[10] <= weight[10] @[compute.scala 67:14]
+    dot.io.b[11] <= weight[11] @[compute.scala 67:14]
+    dot.io.b[12] <= weight[12] @[compute.scala 67:14]
+    dot.io.b[13] <= weight[13] @[compute.scala 67:14]
+    dot.io.b[14] <= weight[14] @[compute.scala 67:14]
+    dot.io.b[15] <= weight[15] @[compute.scala 67:14]
+    io.interrupt <= vld @[compute.scala 70:18]
 
-  module shellSimple :
+  module ShellSimple :
     input clock : Clock
     input reset : UInt<1>
     output io : { mem : { AWVALID : UInt<1>, flip AWREADY : UInt<1>, AWADDR : UInt<32>, AWID : UInt<1>, AWUSER : UInt<0>, AWLEN : UInt<8>, AWSIZE : UInt<3>, AWBURST : UInt<2>, AWLOCK : UInt<2>, AWCACHE : UInt<4>, AWPROT : UInt<3>, AWQOS : UInt<4>, AWREGION : UInt<4>, WVALID : UInt<1>, flip WREADY : UInt<1>, WDATA : UInt<32>, WSTRB : UInt<4>, WLAST : UInt<1>, WID : UInt<1>, WUSER : UInt<0>, flip BVALID : UInt<1>, BREADY : UInt<1>, flip BRESP : UInt<2>, flip BID : UInt<1>, flip BUSER : UInt<0>, ARVALID : UInt<1>, flip ARREADY : UInt<1>, ARADDR : UInt<32>, ARID : UInt<1>, ARUSER : UInt<0>, ARLEN : UInt<8>, ARSIZE : UInt<3>, ARBURST : UInt<2>, ARLOCK : UInt<2>, ARCACHE : UInt<4>, ARPROT : UInt<3>, ARQOS : UInt<4>, ARREGION : UInt<4>, flip RVALID : UInt<1>, RREADY : UInt<1>, flip RDATA : UInt<32>, flip RRESP : UInt<2>, flip RLAST : UInt<1>, flip RID : UInt<1>, flip RUSER : UInt<0>}, host : { flip AWVALID : UInt<1>, AWREADY : UInt<1>, flip AWADDR : UInt<32>, flip WVALID : UInt<1>, WREADY : UInt<1>, flip WDATA : UInt<32>, flip WSTRB : UInt<4>, BVALID : UInt<1>, flip BREADY : UInt<1>, BRESP : UInt<2>, flip ARVALID : UInt<1>, ARREADY : UInt<1>, flip ARADDR : UInt<32>, RVALID : UInt<1>, flip RREADY : UInt<1>, RDATA : UInt<32>, RRESP : UInt<2>}, interrupt : UInt<1>}
 
-    inst dma of DMASimpleXil @[shell.scala 16:21]
+    inst dma of DMASimpleXil @[shell.scala 17:21]
     dma.clock <= clock
     dma.reset <= reset
-    inst computer of ComputSimple @[shell.scala 18:26]
+    inst computer of ComputeSimple @[shell.scala 19:26]
     computer.clock <= clock
     computer.reset <= reset
-    dma.io.mem.RUSER <= io.mem.RUSER @[shell.scala 20:12]
-    dma.io.mem.RID <= io.mem.RID @[shell.scala 20:12]
-    dma.io.mem.RLAST <= io.mem.RLAST @[shell.scala 20:12]
-    dma.io.mem.RRESP <= io.mem.RRESP @[shell.scala 20:12]
-    dma.io.mem.RDATA <= io.mem.RDATA @[shell.scala 20:12]
-    io.mem.RREADY <= dma.io.mem.RREADY @[shell.scala 20:12]
-    dma.io.mem.RVALID <= io.mem.RVALID @[shell.scala 20:12]
-    io.mem.ARREGION <= dma.io.mem.ARREGION @[shell.scala 20:12]
-    io.mem.ARQOS <= dma.io.mem.ARQOS @[shell.scala 20:12]
-    io.mem.ARPROT <= dma.io.mem.ARPROT @[shell.scala 20:12]
-    io.mem.ARCACHE <= dma.io.mem.ARCACHE @[shell.scala 20:12]
-    io.mem.ARLOCK <= dma.io.mem.ARLOCK @[shell.scala 20:12]
-    io.mem.ARBURST <= dma.io.mem.ARBURST @[shell.scala 20:12]
-    io.mem.ARSIZE <= dma.io.mem.ARSIZE @[shell.scala 20:12]
-    io.mem.ARLEN <= dma.io.mem.ARLEN @[shell.scala 20:12]
-    io.mem.ARUSER <= dma.io.mem.ARUSER @[shell.scala 20:12]
-    io.mem.ARID <= dma.io.mem.ARID @[shell.scala 20:12]
-    io.mem.ARADDR <= dma.io.mem.ARADDR @[shell.scala 20:12]
-    dma.io.mem.ARREADY <= io.mem.ARREADY @[shell.scala 20:12]
-    io.mem.ARVALID <= dma.io.mem.ARVALID @[shell.scala 20:12]
-    dma.io.mem.BUSER <= io.mem.BUSER @[shell.scala 20:12]
-    dma.io.mem.BID <= io.mem.BID @[shell.scala 20:12]
-    dma.io.mem.BRESP <= io.mem.BRESP @[shell.scala 20:12]
-    io.mem.BREADY <= dma.io.mem.BREADY @[shell.scala 20:12]
-    dma.io.mem.BVALID <= io.mem.BVALID @[shell.scala 20:12]
-    io.mem.WUSER <= dma.io.mem.WUSER @[shell.scala 20:12]
-    io.mem.WID <= dma.io.mem.WID @[shell.scala 20:12]
-    io.mem.WLAST <= dma.io.mem.WLAST @[shell.scala 20:12]
-    io.mem.WSTRB <= dma.io.mem.WSTRB @[shell.scala 20:12]
-    io.mem.WDATA <= dma.io.mem.WDATA @[shell.scala 20:12]
-    dma.io.mem.WREADY <= io.mem.WREADY @[shell.scala 20:12]
-    io.mem.WVALID <= dma.io.mem.WVALID @[shell.scala 20:12]
-    io.mem.AWREGION <= dma.io.mem.AWREGION @[shell.scala 20:12]
-    io.mem.AWQOS <= dma.io.mem.AWQOS @[shell.scala 20:12]
-    io.mem.AWPROT <= dma.io.mem.AWPROT @[shell.scala 20:12]
-    io.mem.AWCACHE <= dma.io.mem.AWCACHE @[shell.scala 20:12]
-    io.mem.AWLOCK <= dma.io.mem.AWLOCK @[shell.scala 20:12]
-    io.mem.AWBURST <= dma.io.mem.AWBURST @[shell.scala 20:12]
-    io.mem.AWSIZE <= dma.io.mem.AWSIZE @[shell.scala 20:12]
-    io.mem.AWLEN <= dma.io.mem.AWLEN @[shell.scala 20:12]
-    io.mem.AWUSER <= dma.io.mem.AWUSER @[shell.scala 20:12]
-    io.mem.AWID <= dma.io.mem.AWID @[shell.scala 20:12]
-    io.mem.AWADDR <= dma.io.mem.AWADDR @[shell.scala 20:12]
-    dma.io.mem.AWREADY <= io.mem.AWREADY @[shell.scala 20:12]
-    io.mem.AWVALID <= dma.io.mem.AWVALID @[shell.scala 20:12]
-    io.host.RRESP <= dma.io.host.RRESP @[shell.scala 21:13]
-    io.host.RDATA <= dma.io.host.RDATA @[shell.scala 21:13]
-    dma.io.host.RREADY <= io.host.RREADY @[shell.scala 21:13]
-    io.host.RVALID <= dma.io.host.RVALID @[shell.scala 21:13]
-    dma.io.host.ARADDR <= io.host.ARADDR @[shell.scala 21:13]
-    io.host.ARREADY <= dma.io.host.ARREADY @[shell.scala 21:13]
-    dma.io.host.ARVALID <= io.host.ARVALID @[shell.scala 21:13]
-    io.host.BRESP <= dma.io.host.BRESP @[shell.scala 21:13]
-    dma.io.host.BREADY <= io.host.BREADY @[shell.scala 21:13]
-    io.host.BVALID <= dma.io.host.BVALID @[shell.scala 21:13]
-    dma.io.host.WSTRB <= io.host.WSTRB @[shell.scala 21:13]
-    dma.io.host.WDATA <= io.host.WDATA @[shell.scala 21:13]
-    io.host.WREADY <= dma.io.host.WREADY @[shell.scala 21:13]
-    dma.io.host.WVALID <= io.host.WVALID @[shell.scala 21:13]
-    dma.io.host.AWADDR <= io.host.AWADDR @[shell.scala 21:13]
-    io.host.AWREADY <= dma.io.host.AWREADY @[shell.scala 21:13]
-    dma.io.host.AWVALID <= io.host.AWVALID @[shell.scala 21:13]
-    dma.io.core.result <= computer.io.core.result @[shell.scala 23:17]
-    dma.io.core.done <= computer.io.core.done @[shell.scala 23:17]
-    computer.io.core.weight[0] <= dma.io.core.weight[0] @[shell.scala 23:17]
-    computer.io.core.weight[1] <= dma.io.core.weight[1] @[shell.scala 23:17]
-    computer.io.core.weight[2] <= dma.io.core.weight[2] @[shell.scala 23:17]
-    computer.io.core.weight[3] <= dma.io.core.weight[3] @[shell.scala 23:17]
-    computer.io.core.input[0] <= dma.io.core.input[0] @[shell.scala 23:17]
-    computer.io.core.input[1] <= dma.io.core.input[1] @[shell.scala 23:17]
-    computer.io.core.input[2] <= dma.io.core.input[2] @[shell.scala 23:17]
-    computer.io.core.input[3] <= dma.io.core.input[3] @[shell.scala 23:17]
-    computer.io.core.start <= dma.io.core.start @[shell.scala 23:17]
-    io.interrupt <= computer.io.interrupt @[shell.scala 25:18]
+    dma.io.mem.RUSER <= io.mem.RUSER @[shell.scala 21:12]
+    dma.io.mem.RID <= io.mem.RID @[shell.scala 21:12]
+    dma.io.mem.RLAST <= io.mem.RLAST @[shell.scala 21:12]
+    dma.io.mem.RRESP <= io.mem.RRESP @[shell.scala 21:12]
+    dma.io.mem.RDATA <= io.mem.RDATA @[shell.scala 21:12]
+    io.mem.RREADY <= dma.io.mem.RREADY @[shell.scala 21:12]
+    dma.io.mem.RVALID <= io.mem.RVALID @[shell.scala 21:12]
+    io.mem.ARREGION <= dma.io.mem.ARREGION @[shell.scala 21:12]
+    io.mem.ARQOS <= dma.io.mem.ARQOS @[shell.scala 21:12]
+    io.mem.ARPROT <= dma.io.mem.ARPROT @[shell.scala 21:12]
+    io.mem.ARCACHE <= dma.io.mem.ARCACHE @[shell.scala 21:12]
+    io.mem.ARLOCK <= dma.io.mem.ARLOCK @[shell.scala 21:12]
+    io.mem.ARBURST <= dma.io.mem.ARBURST @[shell.scala 21:12]
+    io.mem.ARSIZE <= dma.io.mem.ARSIZE @[shell.scala 21:12]
+    io.mem.ARLEN <= dma.io.mem.ARLEN @[shell.scala 21:12]
+    io.mem.ARUSER <= dma.io.mem.ARUSER @[shell.scala 21:12]
+    io.mem.ARID <= dma.io.mem.ARID @[shell.scala 21:12]
+    io.mem.ARADDR <= dma.io.mem.ARADDR @[shell.scala 21:12]
+    dma.io.mem.ARREADY <= io.mem.ARREADY @[shell.scala 21:12]
+    io.mem.ARVALID <= dma.io.mem.ARVALID @[shell.scala 21:12]
+    dma.io.mem.BUSER <= io.mem.BUSER @[shell.scala 21:12]
+    dma.io.mem.BID <= io.mem.BID @[shell.scala 21:12]
+    dma.io.mem.BRESP <= io.mem.BRESP @[shell.scala 21:12]
+    io.mem.BREADY <= dma.io.mem.BREADY @[shell.scala 21:12]
+    dma.io.mem.BVALID <= io.mem.BVALID @[shell.scala 21:12]
+    io.mem.WUSER <= dma.io.mem.WUSER @[shell.scala 21:12]
+    io.mem.WID <= dma.io.mem.WID @[shell.scala 21:12]
+    io.mem.WLAST <= dma.io.mem.WLAST @[shell.scala 21:12]
+    io.mem.WSTRB <= dma.io.mem.WSTRB @[shell.scala 21:12]
+    io.mem.WDATA <= dma.io.mem.WDATA @[shell.scala 21:12]
+    dma.io.mem.WREADY <= io.mem.WREADY @[shell.scala 21:12]
+    io.mem.WVALID <= dma.io.mem.WVALID @[shell.scala 21:12]
+    io.mem.AWREGION <= dma.io.mem.AWREGION @[shell.scala 21:12]
+    io.mem.AWQOS <= dma.io.mem.AWQOS @[shell.scala 21:12]
+    io.mem.AWPROT <= dma.io.mem.AWPROT @[shell.scala 21:12]
+    io.mem.AWCACHE <= dma.io.mem.AWCACHE @[shell.scala 21:12]
+    io.mem.AWLOCK <= dma.io.mem.AWLOCK @[shell.scala 21:12]
+    io.mem.AWBURST <= dma.io.mem.AWBURST @[shell.scala 21:12]
+    io.mem.AWSIZE <= dma.io.mem.AWSIZE @[shell.scala 21:12]
+    io.mem.AWLEN <= dma.io.mem.AWLEN @[shell.scala 21:12]
+    io.mem.AWUSER <= dma.io.mem.AWUSER @[shell.scala 21:12]
+    io.mem.AWID <= dma.io.mem.AWID @[shell.scala 21:12]
+    io.mem.AWADDR <= dma.io.mem.AWADDR @[shell.scala 21:12]
+    dma.io.mem.AWREADY <= io.mem.AWREADY @[shell.scala 21:12]
+    io.mem.AWVALID <= dma.io.mem.AWVALID @[shell.scala 21:12]
+    io.host.RRESP <= dma.io.host.RRESP @[shell.scala 22:13]
+    io.host.RDATA <= dma.io.host.RDATA @[shell.scala 22:13]
+    dma.io.host.RREADY <= io.host.RREADY @[shell.scala 22:13]
+    io.host.RVALID <= dma.io.host.RVALID @[shell.scala 22:13]
+    dma.io.host.ARADDR <= io.host.ARADDR @[shell.scala 22:13]
+    io.host.ARREADY <= dma.io.host.ARREADY @[shell.scala 22:13]
+    dma.io.host.ARVALID <= io.host.ARVALID @[shell.scala 22:13]
+    io.host.BRESP <= dma.io.host.BRESP @[shell.scala 22:13]
+    dma.io.host.BREADY <= io.host.BREADY @[shell.scala 22:13]
+    io.host.BVALID <= dma.io.host.BVALID @[shell.scala 22:13]
+    dma.io.host.WSTRB <= io.host.WSTRB @[shell.scala 22:13]
+    dma.io.host.WDATA <= io.host.WDATA @[shell.scala 22:13]
+    io.host.WREADY <= dma.io.host.WREADY @[shell.scala 22:13]
+    dma.io.host.WVALID <= io.host.WVALID @[shell.scala 22:13]
+    dma.io.host.AWADDR <= io.host.AWADDR @[shell.scala 22:13]
+    io.host.AWREADY <= dma.io.host.AWREADY @[shell.scala 22:13]
+    dma.io.host.AWVALID <= io.host.AWVALID @[shell.scala 22:13]
+    dma.io.core.result <= computer.io.core.result @[shell.scala 24:17]
+    dma.io.core.done <= computer.io.core.done @[shell.scala 24:17]
+    computer.io.core.weight[0] <= dma.io.core.weight[0] @[shell.scala 24:17]
+    computer.io.core.weight[1] <= dma.io.core.weight[1] @[shell.scala 24:17]
+    computer.io.core.weight[2] <= dma.io.core.weight[2] @[shell.scala 24:17]
+    computer.io.core.weight[3] <= dma.io.core.weight[3] @[shell.scala 24:17]
+    computer.io.core.input[0] <= dma.io.core.input[0] @[shell.scala 24:17]
+    computer.io.core.input[1] <= dma.io.core.input[1] @[shell.scala 24:17]
+    computer.io.core.input[2] <= dma.io.core.input[2] @[shell.scala 24:17]
+    computer.io.core.input[3] <= dma.io.core.input[3] @[shell.scala 24:17]
+    computer.io.core.start <= dma.io.core.start @[shell.scala 24:17]
+    io.interrupt <= computer.io.interrupt @[shell.scala 26:18]
 

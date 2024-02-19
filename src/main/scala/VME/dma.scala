@@ -1,7 +1,7 @@
-package mynnacc.dma
+package dma
 import chisel3._
 import chisel3.util._
-import mynnacc.interface.axi._
+import interface.axi._
 
 case class CoreParams
 (

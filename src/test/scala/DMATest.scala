@@ -1,9 +1,8 @@
-package mynnacc
 import chisel3._
 import chisel3.util._
-import mynnacc.interface.axi._
-import mynnacc.dma._
-import mynnacc.core._
+import interface.axi._
+import dma._
+import core._
 
 
 
@@ -38,5 +37,22 @@ val memP = AXIParams(coherent = false,
         userBits = 0)
 
         
-    emitVerilog(new shellSimple(memP, hostP, coreP), Array("--target-dir", "generated"))
+    emitVerilog(new ShellSimple(memP, hostP, coreP), Array("--target-dir", "generated"))
+}
+
+object StoShellGenerate extends App {
+val coreP = CoreParams()
+val hostP = AXIParams(coherent = false,
+        addrBits = 32,
+        dataBits = 32,
+        lenBits = 8,
+        userBits = 0)
+val memP = AXIParams(coherent = false,
+        addrBits = 32,
+        dataBits = 32,
+        lenBits = 8,
+        userBits = 0)
+
+        
+    emitVerilog(new StoShellSimple(memP, hostP, coreP), Array("--target-dir", "generated"))
 }

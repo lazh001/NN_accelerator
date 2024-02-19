@@ -8,13 +8,13 @@ import scala.math.pow
 class MAC(aBits: Int = 8, bBits: Int = 8, cBits: Int = 16, flopIn: Boolean = false) extends Module {
   val outBits = Math.max(aBits + bBits, cBits) + 1
   val io = IO(new Bundle {
-    val a = Input(UInt(aBits.W))
-    val b = Input(UInt(bBits.W))
-    val c = Input(UInt(cBits.W))
-    val y = Output(UInt(outBits.W))
+    val a = Input(SInt(aBits.W))
+    val b = Input(SInt(bBits.W))
+    val c = Input(SInt(cBits.W))
+    val y = Output(SInt(outBits.W))
   })
 
-  val mult = Wire(UInt((aBits + bBits).W))
+  val mult = Wire(SInt((aBits + bBits).W))
   val rA = if (flopIn) RegNext(io.a) else io.a
   val rB = if (flopIn) RegNext(io.b) else io.b
   val rC = if (flopIn) RegNext(io.c) else io.c
@@ -26,9 +26,9 @@ class MAC(aBits: Int = 8, bBits: Int = 8, cBits: Int = 16, flopIn: Boolean = fal
 
 class AdderIO(val aBits: Int, val bBits: Int) extends Bundle {
   val outBits = Math.max(aBits, bBits) + 1
-  val a = Input(UInt(aBits.W))
-  val b = Input(UInt(bBits.W))
-  val y = Output(UInt(outBits.W))
+  val a = Input(SInt(aBits.W))
+  val b = Input(SInt(bBits.W))
+  val y = Output(SInt(outBits.W))
 }
 
 trait IsAdder { val io: AdderIO }
@@ -54,8 +54,8 @@ class PipeAdder(aBits: Int = 8, bBits: Int = 8) extends Module with IsAdder {
 class Adder(aBits: Int = 8, bBits: Int = 8) extends Module with IsAdder {
   val io = IO(new AdderIO(aBits, bBits))
   val add = Wire(chiselTypeOf(io.y))
-  val rA = Wire(UInt(aBits.W))
-  val rB = Wire(UInt(bBits.W))
+  val rA = Wire(SInt(aBits.W))
+  val rB = Wire(SInt(bBits.W))
   rA := io.a
   rB := io.b
   add := rA +& rB
@@ -70,9 +70,9 @@ class DotProduct(aBits: Int = 8, bBits: Int = 8, blockIn: Int = 16) extends Modu
   val b = aBits + bBits
   val outBits = b + log2Ceil(blockIn) + 1     //该参数下是21位
   val io = IO(new Bundle {
-    val a = Input(Vec(blockIn, UInt(aBits.W)))
-    val b = Input(Vec(blockIn, UInt(bBits.W)))
-    val y = Output(UInt(outBits.W))
+    val a = Input(Vec(blockIn, SInt(aBits.W)))
+    val b = Input(Vec(blockIn, SInt(bBits.W)))
+    val y = Output(SInt(outBits.W))
   })
   val s = Seq.tabulate(log2Ceil(blockIn + 1))(i =>
     pow(2, log2Ceil(blockIn) - i).toInt) // # of total layers
@@ -93,7 +93,7 @@ class DotProduct(aBits: Int = 8, bBits: Int = 8, blockIn: Int = 16) extends Modu
   for (i <- 0 until s(0)) {
     m(i).io.a := io.a(i)
     m(i).io.b := io.b(i)
-    m(i).io.c := 0.U
+    m(i).io.c := 0.S
   }
 
   // PipeAdder Reduction

@@ -1,3 +1,4 @@
+/*
 package core
 
 import chisel3._
@@ -7,7 +8,8 @@ import vta.core.{MAC, PipeAdder, Adder}
 class Dot(
     val aBits: Int = 8,
     val bBits: Int = 8,
-    val blockIn: Int = 16
+    val blockIn: Int = 16,
+    val pipelined: Boolean = false
 ) extends Module {
   val outBits = aBits + bBits + log2Ceil(blockIn) + 1
 
@@ -35,13 +37,15 @@ class Dot(
         .grouped(2)
         .map {
           case Seq(a, b) => {
-            val pipeAdder =
+            val pipeAdder = { if (pipelined)
               Module(new PipeAdder(aBits = a.getWidth, bBits = b.getWidth))
+              else Module(new Adder(aBits = a.getWidth, bBits = b.getWidth))
+            }
             pipeAdder.io.a := a
             pipeAdder.io.b := b
             pipeAdder.io.y
           }
-          case Seq(a) => RegNext(a, 0.U(a.getWidth.W))
+          case Seq(a) => { if (pipelined) RegNext(a, 0.U(a.getWidth.W)) else a }
         }
         .toSeq
       recurAdder(newSeq)
@@ -121,3 +125,4 @@ class TensorAdd(
     }
   }
 }
+*/
